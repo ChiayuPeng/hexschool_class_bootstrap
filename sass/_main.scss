@@ -24,7 +24,7 @@ img {
 
 .side-bar {
 	background-color: $main-color;
-	padding: 40px 32px;
+	padding: 40px 0;
 	height: 100vh;
 	min-width: 294px;
 
@@ -34,37 +34,51 @@ img {
 		width: 151px;
 		height: 40px;
 		margin-bottom: 32px;
+		margin-left: 32px;
 	}
 
 	.side-nav {
 		li {
 			height: 32px;
 			width: 100%;
+			padding-left: 32px;
+			line-height: 32px;
+			transition: all .5s;
 
 			a {
 				line-height: 1.5;
 				color: #000;
 				text-decoration: none;
 				font-weight: bold;
+				height: 32px;
+				display: block;
+
 
 				span {
 					margin-right: 16px;
-					vertical-align: bottom;
+					vertical-align: middle;
 				}
 			}
 
 			&+li {
-				padding-top: 29px;
+				margin-top: 29px;
 			}
 
 			&:hover {
-				border-left: 4px solid #000;
+				border-left: 4px solid $highlight;
+				padding-left: 28px;
+
 				// padding-left: ;
+				a {
+					color: $highlight;
+				}
 			}
 		}
 	}
 
 	.member {
+		padding-left: 32px;
+
 		.pic {
 			margin-right: 16px;
 
@@ -87,4 +101,125 @@ img {
 			}
 		}
 	}
+}
+
+.content {
+	width: 100%;
+
+	.top {
+		padding: 32px 17px;
+
+		.admin-wrap {
+			.admin {
+				font-size: 24px;
+				font-weight: bold;
+				margin-right: 47px;
+			}
+
+			.add {
+				line-height: 1.5;
+				font-weight: bold;
+
+				span {
+					vertical-align: middle;
+					margin-right: 8px;
+					;
+					color: $highlight;
+				}
+			}
+		}
+
+		.function {
+			span {
+				&+span {
+					margin-left: 26px;
+				}
+			}
+		}
+
+	}
+
+	.content-list {
+		padding: 0 17px;
+		margin-bottom: 63px;
+
+		li {
+			align-items: center;
+
+			&.thead {
+				font-weight: bold;
+				border-bottom: 1px solid #000;
+			}
+
+			&.tr {
+				border-bottom: 1px solid #CDDDCD;
+			}
+
+			&>div {
+				padding: 0.75em;
+			}
+
+			&:hover {
+				background-color: $main-color;
+			}
+
+			.id {
+				width: 15%;
+			}
+
+			.name {
+				width: 25%;
+			}
+
+			.email {
+				width: 30%;
+			}
+
+			.verified {
+				width: 20%;
+			}
+
+			.edit {
+				width: 10%;
+
+				span {
+					&+span {
+						margin-left: 25px;
+					}
+				}
+			}
+		}
+	}
+
+	.adminNav {
+		li {
+			cursor: pointer;
+			text-align: center;
+			width: 32px;
+			line-height: 32px;
+			border: 1px solid $highlight;
+			transition: all .5s;
+
+			span {
+				vertical-align: middle;
+				color: $highlight;
+			}
+
+			&.active {
+				background-color: $highlight;
+				color: #fff;
+			}
+
+			&:hover {
+				background-color: $highlight;
+				color: #fff;
+
+				span {
+					color: #fff;
+				}
+			}
+		}
+	}
+
+
 }

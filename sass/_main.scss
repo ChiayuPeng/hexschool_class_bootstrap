@@ -1,0 +1,90 @@
+html,
+body {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	width: 100%;
+	height: 100%;
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+}
+
+ul {
+	margin: 0;
+	padding: 0;
+	list-style: none;
+}
+
+img {
+	width: 100%;
+	display: block;
+}
+
+.admin-wrap {}
+
+.side-bar {
+	background-color: $main-color;
+	padding: 40px 32px;
+	height: 100vh;
+	min-width: 294px;
+
+	// flex-direction: column;
+	// justify-content: space-between;
+	h1 {
+		width: 151px;
+		height: 40px;
+		margin-bottom: 32px;
+	}
+
+	.side-nav {
+		li {
+			height: 32px;
+			width: 100%;
+
+			a {
+				line-height: 1.5;
+				color: #000;
+				text-decoration: none;
+				font-weight: bold;
+
+				span {
+					margin-right: 16px;
+					vertical-align: bottom;
+				}
+			}
+
+			&+li {
+				padding-top: 29px;
+			}
+
+			&:hover {
+				border-left: 4px solid #000;
+				// padding-left: ;
+			}
+		}
+	}
+
+	.member {
+		.pic {
+			margin-right: 16px;
+
+			img {
+				width: 40px;
+				height: 40px;
+				border-radius: 50%;
+			}
+		}
+
+		.simple {
+			.name {
+				font-weight: bold;
+				margin-bottom: 4px;
+			}
+
+			.email {
+				font-size: 14px;
+				color: #0000009A;
+			}
+		}
+	}
+}
